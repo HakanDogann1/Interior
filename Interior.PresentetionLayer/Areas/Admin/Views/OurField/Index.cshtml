@@ -1,0 +1,46 @@
+﻿@model List<Interior.DomainLayer.Concrete.OurField>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="white_shd full margin_bottom_30">
+    <div class="full graph_head">
+        <div class="heading1 margin_0">
+            <h2>Alan</h2>
+        </div>
+    </div>
+    <div class="table_section padding_infor_info">
+        <div class="table-responsive-sm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Alan Adı</th>
+                        <th>Resim</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.OurFieldID</td>
+                            <td>@item.OurFieldName</td>
+                            <td>@item.OurFieldImage</td>
+                            <td><a asp-controller="OurField" asp-action="DeleteOurField" asp-route-id="@item.OurFieldID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a asp-controller="OurField" asp-action="UpdateOurField" asp-route-id="@item.OurFieldID" class="btn btn-outline-warning">Güncelle</a></td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <a asp-controller="OurField" asp-action="AddOurField" class="btn btn-outline-success">Ekle</a>
+        </div>
+    </div>
+</div>

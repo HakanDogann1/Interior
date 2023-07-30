@@ -1,0 +1,36 @@
+﻿@model Interior.DomainLayer.Concrete.Team
+@{
+    ViewData["Title"] = "UpdateTeam";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Takım</h2>
+            </div>
+        </div>
+        <form method="post">
+            <input type="hidden" asp-for="TeamID"/>
+            <div>
+                <label>Ad</label>
+                <input type="text" class="form-control" asp-for="TeamName" />
+            </div>
+            <div>
+                <label>Soyad</label>
+                <input type="text" class="form-control" asp-for="TeamSurname" />
+            </div>
+            <div>
+                <label>Departman</label>
+                <input type="text" class="form-control" asp-for="TeamDepartment" />
+            </div>
+            <br />
+            <br />
+            <button class="btn btn-outline-success">Kaydet</button>
+        </form>
+    </div>
+</div>
+
+
+

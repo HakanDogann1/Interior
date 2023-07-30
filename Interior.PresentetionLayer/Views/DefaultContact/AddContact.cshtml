@@ -1,0 +1,46 @@
+﻿@model Interior.DomainLayer.Concrete.Contact
+
+<section class="w3l-contact-2 py-5">
+    <div class="contact-infubd section-gap py-lg-5 py-md-4">
+        <div class="container">
+            <div class="contact-grids d-grid">
+                <div class="contact-left">
+                    <h4>Bize bir mesaj bırakın</h4>
+                    <h6>
+
+                        Ürünlerimiz projemiz ve fiyatlandırma hakkında daha fazla bilgi veya soruşturma için lütfen çekinmeyin
+                    </h6>
+                    <div class="hours">
+                        <h6 class="info mt-3">Email:</h6>
+                        <p>
+                            <a href="mailto:info@example.com">
+                                info@example.com
+                            </a>
+                        </p>
+                        <h6 class="info mt-3">Adres:</h6>
+                        <p> Interior Ev Dekorasyon, #32841 blok, #221DRS , TR.</p>
+                        <h6 class="info mt-3">İletişim:</h6>
+                        <p class="margin-top"><a href="tel:+(121-345-6789">+121-345-6789</a></p>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form asp-controller="DefaultContact" asp-action="AddContact">
+                        <div class="input-grids">
+                            <input type="text" asp-for="ContactName" id="w3lName" placeholder="Adınız*"
+                                   class="contact-input" />
+                            <input asp-for="ContactMail" id="w3lSender" placeholder="Email Adresiniz*"
+                                   class="contact-input" required="" />
+                            <input type="text" asp-for="ContactSubject" id="w3lSubect" placeholder="Konu*"
+                                   class="contact-input" />
+                        </div>
+                        <div class="form-input">
+                            <textarea asp-for="ContactMessage" id="w3lMessage" placeholder="Lütfen mesajını giriniz*"
+                                      required=""></textarea>
+                        </div>
+                        <button class="btn btn-style btn-primary submit">Mesajı Gönder</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+</section>

@@ -1,0 +1,22 @@
+﻿@model List<Interior.DomainLayer.Concrete.Service2>
+<section id="services" class="services py-5">
+    <div class="container py-lg-5 py-md-4">
+        <h3 class="title-big">Hizmetlerimiz</h3>
+        <div class="row text-center img-grids pt-2">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="@item.Service2Image">
+                        <div class="p-md-5 p-3">
+                            <img src="@item.Service2Icon" alt="" class="img-fluid" />
+                            <h4><a href="#url">@item.Service2Title</a></h4>
+                            <p>
+                              @item.Service2Description
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

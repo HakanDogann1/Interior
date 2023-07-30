@@ -1,0 +1,26 @@
+﻿@model List<Interior.DomainLayer.Concrete.Header>
+
+<div class="companies20-content">
+    <div class="companies-wrapper">
+        <div class="owl-one owl-carousel owl-theme">
+            @foreach (var item in Model)
+            {
+                <div class="item">
+                    <li>
+                        <div class="@item.HeaderImage">
+                            <div class="banner-info container">
+                                <h5 class="banner-text">@item.HeaderTitle</h5>
+                                <h3 class="banner-text">@item.HeaderSubtitle</h3>
+                                <p>@item.HeaderDescription</p>
+                                <a href="about.html" class="btn btn-primary btn-style">Keşfedin</a>
+                                <a href="contact.html" class="btn transparent-btn btn-style ml-2">İletişime Geç</a>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+            }
+          
+        </div>
+    </div>
+</div>

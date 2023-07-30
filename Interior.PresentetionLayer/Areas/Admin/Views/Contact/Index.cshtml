@@ -1,0 +1,51 @@
+﻿@model List<Interior.DomainLayer.Concrete.Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Gelen Mesajlar</h2>
+            </div>
+        </div>
+        <div class="table_section padding_infor_info">
+            <div class="table-responsive-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Ad</th>
+                            <th>Mail</th>
+                            <th>Konu</th>
+                            <th>Mesaj</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ContactID</td>
+                                <td>@item.ContactName</td>
+                                <td>@item.ContactMail</td>
+                                <td>@item.ContactSubject</td>
+                                <td>@item.ContactMessage</td>
+                                <td><a asp-controller="Contact" asp-action="DeleteContact" asp-route-id="@item.ContactID" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a asp-controller="Contact" asp-action="UpdateContact" asp-route-id="@item.ContactID" class="btn btn-outline-warning">Güncelle</a></td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+                <br />
+                <br />
+                <a asp-controller="Contact" asp-action="AddContact" class="btn btn-outline-success">Ekle</a>
+            </div>
+        </div>
+    </div>

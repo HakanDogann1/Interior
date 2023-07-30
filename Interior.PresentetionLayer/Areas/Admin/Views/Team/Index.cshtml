@@ -1,0 +1,48 @@
+﻿@model List<Interior.DomainLayer.Concrete.Team>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="white_shd full margin_bottom_30">
+    <div class="full graph_head">
+        <div class="heading1 margin_0">
+            <h2>Takım</h2>
+        </div>
+    </div>
+    <div class="table_section padding_infor_info">
+        <div class="table-responsive-sm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Departman</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.TeamID</td>
+                            <td>@item.TeamName</td>
+                            <td>@item.TeamSurname</td>
+                            <td>@item.TeamDepartment</td>
+                            <td><a asp-controller="Team" asp-action="DeleteTeam" asp-route-id="@item.TeamID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a asp-controller="Team" asp-action="UpdateTeam" asp-route-id="@item.TeamID" class="btn btn-outline-warning">Güncelle</a></td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <a asp-controller="Team" asp-action="AddTeam" class="btn btn-outline-success">Ekle</a>
+        </div>
+    </div>
+</div>

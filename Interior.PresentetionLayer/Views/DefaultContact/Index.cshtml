@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+@await Component.InvokeAsync("_HeadPartial")
+<body>
+    @await Component.InvokeAsync("_HeaderPartial")
+    <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-contact py-5">
+            <div class="container py-lg-5 py-md-3">
+                <h2 class="title">İletişim</h2>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="#url">Ana Sayfa</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> İletişim</li>
+            </ul>
+        </div>
+    </section>
+  @await Html.PartialAsync("AddContact.cshtml")
+    <!-- /contact-form-2 -->
+    <div class="map-iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48027.38480619058!2d32.57272309863421!3d41.20626185515139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40835335ca55f4a3%3A0x58c149eab8f0a954!2zS2FyYWLDvGssIEthcmFiw7xrIE1lcmtlei9LYXJhYsO8aw!5e0!3m2!1str!2str!4v1690745383638!5m2!1str!2str" width="1910" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+    @await Component.InvokeAsync("_FooterPartial")
+    @await Component.InvokeAsync("_ScriptPartial")
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+﻿@model Interior.DomainLayer.Concrete.Experience
+@{
+    ViewData["Title"] = "AddExperience";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Deneyim</h2>
+            </div>
+        </div>
+        <form method="post">
+            <div>
+                <label>Başlık</label>
+                <input type="text" class="form-control" asp-for="ExperienceTitle" />
+            </div>
+            <div>
+                <label>Alt Başlık</label>
+                <input type="text" class="form-control" asp-for="ExperienceSubtitle" />
+            </div>
+            <div>
+                <label>İçerik</label>
+                <input type="text" class="form-control" asp-for="ExperienceDescription" />
+            </div>
+            <div>
+                <label>Video</label>
+                <input type="text" class="form-control" asp-for="ExperienceVideo" />
+            </div>
+            <br />
+            <br />
+            <button class="btn btn-outline-success">Kaydet</button>
+        </form>
+    </div>
+</div>
+
+

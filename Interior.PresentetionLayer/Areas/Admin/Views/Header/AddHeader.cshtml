@@ -1,0 +1,38 @@
+﻿@model Interior.DomainLayer.Concrete.Header
+@{
+    ViewData["Title"] = "AddHeader";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Sayfa Başlığı</h2>
+            </div>
+        </div>
+        <form method="post">
+            <div>
+                <label>Başlık</label>
+                <input type="text" class="form-control" asp-for="HeaderTitle" />
+            </div>
+            <div>
+                <label>Alt Başlık</label>
+                <input type="text" class="form-control" asp-for="HeaderSubtitle" />
+            </div>
+            <div>
+                <label>İçerik</label>
+                <input type="text" class="form-control" asp-for="HeaderDescription" />
+            </div>
+            <div>
+                <label>Resim</label>
+                <input type="text" class="form-control" asp-for="HeaderImage" />
+            </div>
+            <br />
+            <br />
+            <button class="btn btn-outline-success">Kaydet</button>
+        </form>
+    </div>
+</div>
+
+

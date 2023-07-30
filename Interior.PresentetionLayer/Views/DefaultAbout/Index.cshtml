@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+@await Component.InvokeAsync("_HeadPartial")
+<body>
+    <!--w3l-header-->
+
+    <header class="w3l-header-nav">
+        @await Component.InvokeAsync("_HeaderPartial")
+    </header>
+    <!-- //w3l-header -->
+    <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+            <div class="container py-lg-5 py-md-3">
+                <h2 class="title">Hakkımızda</h2>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/DefaultHome/Index/">Ana Sayfa</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>Hakkımızda</li>
+            </ul>
+        </div>
+    </section>
+    <!-- features-4 -->
+   @await Component.InvokeAsync("_ExperiencePartial")
+
+    @await Component.InvokeAsync("_ContentPartial")
+    <!-- //content-with-photo-16 -->
+    <!-- team -->
+   @await Component.InvokeAsync("_TeamPartial")
+    <!-- team -->
+
+   @await Component.InvokeAsync("_FooterPartial")
+ 
+    <!-- jQuery and Bootstrap JS -->
+ @await Component.InvokeAsync("_ScriptPartial")
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+﻿@model List<Interior.DomainLayer.Concrete.Project>
+<div class="testimonials py-5">
+    <div class="container py-lg-3">
+        <h3 class="title-big">Projelerimiz</h3>
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <div class="owl-testimonial owl-carousel owl-theme text-center ">
+                    @foreach (var item in Model)
+                    {
+                        <div class="item">
+                            <div class="@item.ProjectImage">
+                                <div class="slider-img-info">
+                                    <h3>@item.ProjectTitle</h3>
+                                    <div class="message">
+                                        @item.ProjectDescription
+                                    </div>
+                                    <a href="#url" class="btn btn-style btn-primary mt-4">Devamını Oku...</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                   
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

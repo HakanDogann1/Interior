@@ -1,0 +1,29 @@
+﻿@model List<Interior.DomainLayer.Concrete.Service>
+@{
+    int count = 1;
+}
+<section id="services" class="home-services py-5">
+    <div class="container py-lg-5 py-md-4">
+        <h3 class="title-big">Hizmetlerimiz</h3>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="box-wrap">
+                        <div class="icon">
+                            <span class="@item.ServiceIcon"></span>
+                        </div>
+                        <h4 class="number">@count</h4>
+                        <h4><a href="#url">@item.ServiceTitle</a></h4>
+                        <p>
+                           @item.ServiceDescription
+                        </p>
+                        <a href="#read" class="read">Devamını Oku...</a>
+                    </div>
+                </div>
+                count++;
+            }
+           
+        </div>
+    </div>
+</section>

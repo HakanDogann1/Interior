@@ -1,0 +1,39 @@
+﻿@model Interior.DomainLayer.Concrete.Service2
+@{
+    ViewData["Title"] = "UpdateService2";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Hizmetler 2</h2>
+            </div>
+        </div>
+        <form method="post">
+            <input type="hidden" asp-for="Service2ID"/>
+            <div>
+                <label>Başlık</label>
+                <input type="text" class="form-control" asp-for="Service2Title" />
+            </div>
+            <div>
+                <label>İçerik</label>
+                <input type="text" class="form-control" asp-for="Service2Description" />
+            </div>
+            <div>
+                <label>İkon</label>
+                <input type="text" class="form-control" asp-for="Service2Icon" />
+            </div>
+            <div>
+                <label>Resim</label>
+                <input type="text" class="form-control" asp-for="Service2Image" />
+            </div>
+            <br />
+            <br />
+            <button class="btn btn-outline-success">Kaydet</button>
+        </form>
+    </div>
+</div>
+
+

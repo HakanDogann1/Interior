@@ -1,0 +1,51 @@
+﻿@model List<Interior.DomainLayer.Concrete.Service2>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="white_shd full margin_bottom_30">
+    <div class="full graph_head">
+        <div class="heading1 margin_0">
+            <h2>Hizmetler 2</h2>
+        </div>
+    </div>
+    <div class="table_section padding_infor_info">
+        <div class="table-responsive-sm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Başlık</th>
+                        <th>İçerik</th>
+                        <th>İkon</th>
+                        <th>Resim</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Service2ID</td>
+                            <td>@item.Service2Title</td>
+                            <td>@item.Service2Description</td>
+                            <td>@item.Service2Icon</td>
+                            <td>@item.Service2Image</td>
+                            <td><a asp-controller="Service2" asp-action="DeleteService2" asp-route-id="@item.Service2ID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a asp-controller="Service2" asp-action="UpdateService2" asp-route-id="@item.Service2ID" class="btn btn-outline-warning">Güncelle</a></td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <a asp-controller="Service2" asp-action="AddService2" class="btn btn-outline-success">Ekle</a>
+        </div>
+    </div>
+</div>
+

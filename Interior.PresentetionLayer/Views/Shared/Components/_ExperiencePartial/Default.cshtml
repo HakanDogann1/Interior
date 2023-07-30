@@ -1,0 +1,42 @@
+﻿@model List<Interior.DomainLayer.Concrete.Experience>
+<section class="w3l-about" id="about">
+    <div class="new-block py-5">
+        <div class="container py-lg-5 py-md-4">
+            @foreach (var item in Model)
+            {
+                            <div class="row middle-section">
+                <div class="col-lg-6 section-width align-self">
+                    <h5>@item.ExperienceTitle</h5>
+                    <h2>@item.ExperienceSubtitle</h2>
+                    <p class="mt-4 pb-3">
+                       @item.ExperienceDescription
+                    </p>
+                        <a href="about.html" class="btn btn-outline-primary btn-outline-style mt-4">Hakkımızda daha fazla bilgi edinin </a>
+                </div>
+                <div class="col-lg-6 history-info mt-lg-0 mt-5 pt-lg-0 pt-md-4">
+                    <div class="position-relative img-border">
+                        <img src="~/interiorfloor-starter/assets/images/manzara.PNG" class="img-fluid video-popup-image" alt="video-popup">
+
+                        <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
+                            <span class="video-play-icon">
+                                <span class="fa fa-play"></span>
+                            </span>
+                        </a>
+
+                        <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                        <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                                <iframe width="560" height="315" src="@item.ExperienceVideo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SMKPKGW083c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            }
+        </div>
+    </div>
+</section>

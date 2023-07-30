@@ -1,0 +1,59 @@
+﻿
+<header class="w3l-header-nav">
+    <!--/nav-->
+    <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Interior <span>Floor</span></a>
+            <!-- if logo is image enable this
+                        <a class="navbar-brand" href="#index.html">
+                            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                        </a> -->
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa icon-expand fa-bars"></span>
+                <span class="fa icon-close fa-times"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/DefaultHome/Index/">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item @@about__active">
+                        <a class="nav-link" href="/DefaultAbout/Index/">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item @@services__active">
+                        <a class="nav-link" href="/DefaultService/Index/">Hizmetlerimiz</a>
+                    </li>
+                    <li class="nav-item @@contact__active">
+                        <a class="nav-link" href="/DefaultContact/Index/">İletişim</a>
+                    </li>
+                </ul>
+                <!--/search-right-->
+                <div class="search-right">
+                    <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
+                    <!-- search popup -->
+                    <div id="search" class="pop-overlay">
+                        <div class="popup">
+
+                            <form action="#" method="post" class="search-box">
+                                <input type="search" placeholder="Aranacak kelimeyi giriniz..." name="search" required="required"
+                                       autofocus="">
+                                <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
+                            </form>
+
+                        </div>
+                        <a class="close" href="#close">×</a>
+                    </div>
+                    <!-- /search popup -->
+                </div>
+                <!--//search-right-->
+                <div class="box-support">
+                    <p>İletişlim Numarası <span class="fa fa-headphones"></span></p>
+                    <h5>121-345-6789</h5>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--//nav-->
+</header>
